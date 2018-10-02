@@ -1,0 +1,35 @@
+type Show {
+  id: ID!
+  title: String!
+  genre: String!
+  themeSongUrl: String
+  startDate: String!
+  endDate: String
+}
+
+input UpdatedShow {
+  id: ID!
+  title: String
+  genre: String
+  themeSongUrl: String
+  startDate: String
+  endDate: String
+}
+
+input NewShow {
+  title: String!
+  genre: String!
+  themeSongUrl: String
+  startDate: String!
+  endDate: String
+}
+
+extend type Query {
+  allShows: [Show]!
+  getShow(id: ID!): Show!
+}
+
+extend type Mutation {
+  newShow(input: NewShow!): Show!
+  updateShow(input: UpdatedShow!): Show!
+}

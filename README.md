@@ -1,26 +1,19 @@
-# Front End Masters: API Design with Node V2
-> Learn to build with Node, Express, Mongo, and GraphQL
+# Fresh Prince Show (or your own) API with Node/GraphQL
 
-## What you'll need to know
-* JavaScript
-* basic HTTP knowledge
-* basic API knowledge
+## Reasons for the Repo
+This repo isn't production ready or used in any apps, it's just my playground to learn Node and GraphQL, since the industry is going that way!
 
-## Dependencies
-* Mongo (if you don't have this, signup for a free mongo DB [at mLab](https://mlab.com/))
-* Node 6+
-* Yarn or Npm (Yarn recommended)
+## Code taken from / based on Front End Masters: API Design with Node V2
+I used the code from this course as a baseline to create this API, because the best way to really learn is doing :).
 
-## Getting Started
-The curriculum is broken up by branches. Each branch walks through a different lesson. There are usually some tests you must get to pass. For each branch, there is a solution branch.
+https://frontendmasters.com/courses/api-node-rest-graphql/ is the link to the course!
 
-* Checkout to the first lesson branch `git checkout lesson-1`
+## How to use
+Clone the repo, then use yarn to install.
 
-## Contributing
-If you see issues:
+Open up localhost:3000/docs for Graphiql interface
 
-* fork this repo
-* clone your fork
-* cut a branch
-* write your code
-* issue PR to upstream
+## Next steps
+I'll be adding tests, db scripts, and more comments to better understand what's going on. Further, I'll be exploring nested mutations / resolves for the relationships within the models.
+
+Lastly, I'll add some example screenshots and queries to get quotes from different characters!

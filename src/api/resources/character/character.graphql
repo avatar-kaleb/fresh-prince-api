@@ -1,0 +1,30 @@
+type Character {
+  id: ID!
+  name: String!
+  pictureUrl: String
+  relationshipToMain: String!
+  show: Show
+}
+
+input UpdatedCharacter {
+  id: ID!
+  name: String
+  pictureUrl: String
+  relationshipToMain: String
+}
+
+input NewCharacter {
+  name: String!
+  pictureUrl: String
+  relationshipToMain: String!
+}
+
+extend type Query {
+  allCharacters: [Character]!
+  getCharacter(id: ID!): Character!
+}
+
+extend type Mutation {
+  newCharacter(input: NewCharacter!): Character!
+  updateCharacter(input: UpdatedCharacter!): Character!
+}

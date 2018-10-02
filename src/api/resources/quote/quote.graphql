@@ -1,0 +1,32 @@
+type Quote {
+  id: ID!
+  quote: String!
+  category: String!
+  character: Character
+  episodeNumber: Int
+}
+
+input UpdatedQuote {
+  id: ID!
+  quote: String
+  category: String
+  character: UpdatedCharacter
+  episodeNumber: Int
+}
+
+input NewQuote {
+  quote: String!
+  category: String!
+  character: UpdatedCharacter
+  episodeNumber: Int
+}
+
+extend type Query {
+  allQuotes: [Quote]!
+  getQuote(id: ID!): Quote!
+}
+
+extend type Mutation {
+  newQuote(input: NewQuote!): Quote!
+  updateQuote(input: UpdatedQuote!): Quote!
+}

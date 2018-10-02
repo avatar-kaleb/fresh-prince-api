@@ -14,4 +14,4 @@ characterRouter
   .route("/:id")
   .get(characterController.getOne)
   .put(characterController.updateOne)
-  .delete(characterController.createOne);
+  .delete(characterController.deleteOne);

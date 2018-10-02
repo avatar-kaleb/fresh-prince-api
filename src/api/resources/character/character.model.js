@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Mongoose } from "mongoose";
 
 const characterSchema = new mongoose.Schema({
   name: {
@@ -6,17 +6,23 @@ const characterSchema = new mongoose.Schema({
     required: [true, "Character must have a name"]
   },
 
-  relationshipToWill: {
-    type: String,
-    required: [true, "Character must have relationship to Will."]
+  fromLocation: {
+    type: String
   },
 
-  quotes: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "quote"
-    }
-  ]
+  pictureUrl: {
+    type: String
+  },
+
+  relationshipToMain: {
+    type: String,
+    required: [true, "Character must have relationship to main character."]
+  },
+
+  show: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "show"
+  }
 });
 
 export const Character = mongoose.model("character", characterSchema);
