@@ -12,8 +12,3 @@ https://frontendmasters.com/courses/api-node-rest-graphql/ is the link to the co
 Clone the repo, then use yarn to install.
 
 Open up localhost:3000/docs for Graphiql interface
-
-## Next steps
-I'll be adding tests, db scripts, and more comments to better understand what's going on. Further, I'll be exploring nested mutations / resolves for the relationships within the models.
-
-Lastly, I'll add some example screenshots and queries to get quotes from different characters!
